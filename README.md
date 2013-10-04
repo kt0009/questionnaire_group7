@@ -1,6 +1,11 @@
 Stat 157 Questionnaire Data Wrangling
 =====================================
 
+Group Members:
+--------------
+Vincent Canlas, He Ma, Alyssa Parker, Carl Shan
+
+
 Due Date
 --------
 This assignment is due on Monday, Oct 7th by 11:59pm.
