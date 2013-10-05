@@ -88,13 +88,8 @@ import re
 import csv
 
 ## Removing unicode
-filtered_data[17] = {'Timestamp': '9/4/2013 23:16:01',
- 'What is your learning style?': u'Your scores were:\nVisual: 10\nAural: 10\nRead/Write: 2\nKinesthetic: 13\n\n You have a multimodal (VAK) learning preference.\n\n\n \n ',
- 'Which department and course numbers (e.g. Stat 157)?': ''}
-
-filtered_data[24] = {'Timestamp': '9/5/2013 0:30:46',
-  'What is your learning style?': u"You are helping someone who wants to go to your airport, the center of town or railway station. You would:\nwrite down the directions.\ndraw, or show her a map, or give her a map.\n\nYou have finished a competition or test and would like some feedback. You would like to have feedback:\nusing examples from what you have done.\nfrom somebody who talks it through with you.\nusing a written description of your results.\n\nYou want to learn a new program, skill or game on a computer. You would:\ntalk with people who know about the program.\nuse the controls or keyboard.\nfollow the diagrams in the book that came with it.\n\nI like websites that have:\nthings I can click on, shift or try.\ninteresting written descriptions, lists and explanations.\ninteresting design and visual features.\n\nYou are planning a vacation for a group. You want some feedback from them about the plan. You would:\ndescribe some of the highlights they will experience.\nphone, text or email them.\n\nYou are not sure whether a word should be spelled `dependent' or `dependant'. You would:\nfind it online or in a dictionary.\n\nYou are going to cook something as a special treat. You would:\ncook something you know without the need for instructions.\nlook on the Internet or in some cookbooks for ideas from the pictures.\n\nYou are going to choose food at a restaurant or cafe. You would:\nchoose from the descriptions in the menu.\nlisten to the waiter or ask friends to recommend choices.\nchoose something that you have had there before.\n\nYou have a problem with your heart. You would prefer that the doctor:\nused a plastic model to show what was wrong.\ngave you something to read to explain what was wrong.\ndescribed what was wrong.\n\nRemember a time when you learned how to do something new. Avoid choosing a physical skill, eg. riding a bike. You learned best by:\nwatching a demonstration.\nwritten instructions e.g. a manual or book.\nlistening to somebody explaining it and asking questions.\n\nOther than price, what would most influence your decision to buy a new non-fiction book?\nA friend talks about it and recommends it.\n\nYou are using a book, CD or website to learn how to take photos with your new digital camera. You would like to have:\nclear written instructions with lists and bullet points about what to do.\ndiagrams showing the camera and what each part does.\n\nYou are about to purchase a digital camera or mobile phone. Other than price, what would most influence your decision?\nTrying or testing it\nReading the details or checking its features online.\n\nDo you prefer a teacher or a presenter who uses:\ndemonstrations, models or practical sessions.\nquestion and answer, talk, group discussion, or guest speakers.\ndiagrams, charts or graphs.\n\nA group of tourists wants to learn about the parks or wildlife reserves in your area. You would:\ntalk about, or arrange a talk for them about parks or wildlife reserves.\ntake them to a park or wildlife reserve and walk with them.\n\nYou have to make an important speech at a conference or special occasion. You would:\nwrite a few key words and practice saying your speech over and over.\nwrite out your speech and learn from reading it over several times.\n",
-  'Which department and course numbers (e.g. Stat 157)?': 'CS61A, CS61B, stat133,stat 134, stat135'}
+filtered_data[17][fieldnames[2]] = re.sub(u'\u2022', '', filtered_data[17][fieldnames[1]])
+filtered_data[24][fieldnames[2]] = re.sub(u'\u2013', '', filtered_data[24][fieldnames[1]])
 
 def clean_classes(string):
 	s = []
@@ -115,10 +110,8 @@ for elem in filtered_data:
 				row_dict[elem] = 1
 		cleaned_data.append(row_dict)
 
-names = ['Timestamp', 'Aural', 'Kinesthetic', 'Read/Write', 'Visual', 'Stat 133', 'Stat 134', 'Stat 135']
-
-
 # Creates .csv file with cleaned data
+names = ['Timestamp', 'Aural', 'Kinesthetic', 'Read/Write', 'Visual', 'Stat 133', 'Stat 134', 'Stat 135']
 f = open('data.csv', 'wb')
 dict_writer = csv.DictWriter(f, names, restval='NA')
 dict_writer.writeheader()
