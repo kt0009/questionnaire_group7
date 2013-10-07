@@ -121,8 +121,8 @@ for elem in filtered_data:
         row_dict = {'Timestamp' : elem['Timestamp'], 'Visual' : scores[0], 'Aural' : scores[1], 'Read_Write' : scores[2], 'Kinesthetic': scores[3], 'STAT133' : '0', 'STAT134' : '0', 'STAT135' : '0', 'CS' : '0'}
         classes = clean_classes(elem[fieldnames[2]]) # only keeps Stat 133, Stat 134 and Stat 135
         for course in ('STAT133', 'STAT134', 'STAT135'):
-			if course in classes:
-				row_dict[course] = 1
+            if course in classes:
+                row_dict[course] = 1
         if re.match(r'[Cc][Ss] ?[0-9]+',elem[fieldnames[2]]): # if the person has taken as CS classes
             row_dict['CS'] = 1
         cleaned_data.append(row_dict)
@@ -195,7 +195,7 @@ dict_writer.writerows(cleaned_data)
 
 # <markdowncell>
 
-# <img src="files/scatterplot_style.png">
+# <img src="~/files/scatterplot_style.png">
 
 # <rawcell>
 
