@@ -5,6 +5,21 @@ Group Members:
 --------------
 Vincent Canlas, He Ma, Alyssa Parker, Carl Shan
 
+How to reproduce the data:
+---------------------------
+1. [Group7.ipynb](https://github.com/sunnymh/questionnaire_group7/blob/master/Group%207.ipynb) is the file containing our final product.  
+It contains the code for pasing the data, which produces [data.csv](https://github.com/sunnymh/questionnaire_group7/blob/master/data.csv), and the result of analysis and visualization.  
+Import basic Python libraries for use in your program: [os.path](http://docs.python.org/2/library/os.path.html) and [ConfigParser](http://docs.python.org/2/library/configparser.html).  
+We also imported `re` and `csv` for regular expression parsing and creating csv files respectively.  
+Make sure you have all the plots in the same directory in order for the plots to be shown in the notebook.  
+2. [Questionnaire_ttests.R](https://github.com/sunnymh/questionnaire_group7/blob/master/Questionnaire_ttests.R) is the R code for analysis.  
+If you want to reproduce the data, please add the directory which contains the project to `dir = ` in the first line of the code before running it. It will read in [data.csv](https://github.com/sunnymh/questionnaire_group7/blob/master/data.csv) produced by [Group7.ipynb](https://github.com/sunnymh/questionnaire_group7/blob/master/Group%207.ipynb)   
+3. [visualization.R](https://github.com/sunnymh/questionnaire_group7/blob/master/visualization.R) is the R code for visualization.  
+If you want to reproduce the data, please add the directory which contains the project to `dir = ` in the first line of the code. It will read in [data.csv](https://github.com/sunnymh/questionnaire_group7/blob/master/data.csv) produced by [Group7.ipynb](https://github.com/sunnymh/questionnaire_group7/blob/master/Group%207.ipynb) and produce the plots in the directory.  
+It uses [vioplot](http://cran.r-project.org/web/packages/vioplot/index.html), [pheatmap](http://cran.r-project.org/web/packages/pheatmap/index.html) and [plotrix](http://cran.r-project.org/web/packages/plotrix/index.html). Please install these three packages before running the code.
+
+
+
 
 Due Date
 --------
