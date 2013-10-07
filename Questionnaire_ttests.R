@@ -1,3 +1,8 @@
+# dir = '/home/sunnymh/stat157/questionnaire_group7/'
+dir = 
+  
+data = read.csv(paste(dir, 'data.csv', sep = ''), colClasses=c("character",rep("numeric",8)))
+  
 # t tests to determine if the distribution of each learning style is significantly different #
 
 t.test(data$Aural, data$Kinesthetic, paired=TRUE)

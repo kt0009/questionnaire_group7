@@ -1,4 +1,5 @@
-dir = '/home/sunnymh/stat157/questionnaire_group7/'
+# dir = '/home/sunnymh/stat157/questionnaire_group7/'
+dir = 
 
 library(vioplot)
 library(pheatmap)
