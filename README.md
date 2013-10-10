@@ -8,7 +8,8 @@ Vincent Canlas, He Ma, Alyssa Parker, Carl Shan
 How to reproduce the data:
 ---------------------------
 1. [Group7.ipynb](https://github.com/sunnymh/questionnaire_group7/blob/master/Group%207.ipynb) is the file containing our final product.  
-It contains the code for pasing the data, which produces [data.csv](https://github.com/sunnymh/questionnaire_group7/blob/master/data.csv), and the result of analysis and visualization.  
+Step0 and step 1 contain the code for pasing the data, which produces [data.csv](https://github.com/sunnymh/questionnaire_group7/blob/master/data.csv), and step 2 and 3 are the results of analysis and visualization in R.  
+In order for everything show up in ipython notebook, run step 0 and 1 of the file. Run [visualization.R](https://github.com/sunnymh/questionnaire_group7/blob/master/visualization.R), then run step 2 and 3 in this file.  
 Import basic Python libraries for use in your program: [os.path](http://docs.python.org/2/library/os.path.html) and [ConfigParser](http://docs.python.org/2/library/configparser.html).  
 We also imported `re` and `csv` for regular expression parsing and creating csv files respectively.  
 Make sure you have all the plots in the same directory in order for the plots to be shown in the notebook.  
